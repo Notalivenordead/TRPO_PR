@@ -8,27 +8,28 @@
         Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!--Объявление строк-->
         <Grid.RowDefinitions>
             <RowDefinition Height="45"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="45"></RowDefinition>
         </Grid.RowDefinitions>
 
+        <!--Объявление столбцов-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="120"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="BackButton" Content="Назад" Grid.Column="0" Margin="10,12,621,13" Grid.ColumnSpan="2"/>
+        <Button x:Name="BackButton" Content="Назад" Grid.Column="0" Margin="10, 10, 10, 10"/>
         <ToggleButton x:Name="ThemeToggle" Grid.Column="2" 
-                  Content="Тёмная тема" Click="ThemeToggle_Click" VerticalAlignment="Top" Margin="0,13,0,0"/>
-        <Button x:Name="ExitButton" Content="Закрыть" Grid.Column="3" Click="ExitButton_Click" 
-            Margin="0,12,10,13"/>
+                  Content="Тёмная тема" Click="ThemeToggle_Click" Margin="10,10,10,10" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="ExitButton" Content="Закрыть" Grid.Column="3" Click="ExitButton_Click" Margin="10, 10, 10, 10"/>
         <Frame x:Name="MainFrame" Grid.Row="1" Grid.ColumnSpan="4" NavigationUIVisibility="Hidden"/>
         <TextBlock x:Name="DateTimeNow" Grid.Row="2" Grid.ColumnSpan="4" 
                HorizontalAlignment="Right" VerticalAlignment="Center" 
-               Margin="0,0,10,0" Height="35" Width="194"/>
+               Margin="0,0,10,0"/>
     </Grid>
 </Window>

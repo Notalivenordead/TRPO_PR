@@ -5,9 +5,11 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+			<!-- Ресурсы загружаются динамически
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Styles1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+			-->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

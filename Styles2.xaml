@@ -6,30 +6,31 @@
 		<Setter Property="Height" Value="35"/>
 		<Setter Property="Width" Value="120"/>
 		<Setter Property="Margin" Value="10"/>
-		<Setter Property="FontFamily" Value="Arial"/>
+		<Setter Property="FontFamily" Value="Segoe UI"/>
 		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Background" Value="LightBlue"/>
-		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="Background" Value="#FF333333"/>
+		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="BorderThickness" Value="1"/>
-		<Setter Property="BorderBrush" Value="DarkBlue"/>
+		<Setter Property="BorderBrush" Value="#FF666666"/>
 	</Style>
 
 	<!-- Стиль для TextBox -->
 	<Style TargetType="TextBox">
 		<Setter Property="Height" Value="30"/>
 		<Setter Property="Margin" Value="5"/>
-		<Setter Property="FontFamily" Value="Arial"/>
+		<Setter Property="FontFamily" Value="Segoe UI"/>
 		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Background" Value="White"/>
+		<Setter Property="Background" Value="#FF222222"/>
+		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="BorderThickness" Value="1"/>
-		<Setter Property="BorderBrush" Value="Gray"/>
+		<Setter Property="BorderBrush" Value="#FF666666"/>
 	</Style>
 
 	<!-- Стиль для Label -->
 	<Style TargetType="Label">
-		<Setter Property="FontFamily" Value="Arial"/>
+		<Setter Property="FontFamily" Value="Segoe UI"/>
 		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Foreground" Value="DarkBlue"/>
+		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="Margin" Value="5"/>
 	</Style>
 

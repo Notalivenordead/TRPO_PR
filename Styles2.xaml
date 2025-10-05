@@ -4,7 +4,6 @@
 	<!-- Стиль для кнопок -->
 	<Style TargetType="Button">
 		<Setter Property="Height" Value="35"/>
-		<Setter Property="Padding" Value="8"/>
 		<Setter Property="Margin" Value="12"/>
 		<Setter Property="FontFamily" Value="Segoe UI"/>
 		<Setter Property="FontSize" Value="12pt"/>
@@ -20,7 +19,7 @@
 		<Setter Property="Width" Value="120"/>
 		<Setter Property="Margin" Value="5"/>
 		<Setter Property="FontFamily" Value="Segoe UI"/>
-		<Setter Property="FontSize" Value="12pt"/>
+		<Setter Property="FontSize" Value="11pt"/>
 		<Setter Property="Background" Value="#FF444444"/>
 		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="BorderThickness" Value="1"/>
@@ -32,7 +31,7 @@
 		<Setter Property="Height" Value="30"/>
 		<Setter Property="Margin" Value="5"/>
 		<Setter Property="FontFamily" Value="Segoe UI"/>
-		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="FontSize" Value="11pt"/>
 		<Setter Property="Background" Value="#FF222222"/>
 		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="BorderThickness" Value="1"/>
@@ -42,7 +41,7 @@
 	<!-- Стиль для Label -->
 	<Style TargetType="Label">
 		<Setter Property="FontFamily" Value="Segoe UI"/>
-		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="FontSize" Value="11pt"/>
 		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="Margin" Value="5"/>
 	</Style>

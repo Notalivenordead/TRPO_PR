@@ -17,16 +17,16 @@
 
         <!--Объявление столбцов-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="140"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="140"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="BackButton" Content="Назад" Grid.Column="0" Margin="10, 10, 10, 10"/>
+        <Button x:Name="BackButton" Content="Назад" Grid.Column="0" Margin="5,5,5,5"/>
         <ToggleButton x:Name="ThemeToggle" Grid.Column="2" 
-                  Content="Тёмная тема" Click="ThemeToggle_Click" Margin="10,10,10,10" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="ExitButton" Content="Закрыть" Grid.Column="3" Click="ExitButton_Click" Margin="10, 10, 10, 10"/>
+                  Content="Тёмная тема" Click="ThemeToggle_Click" Margin="5,5,5,5"/>
+        <Button x:Name="ExitButton" Content="Закрыть" Grid.Column="3" Click="ExitButton_Click" Margin="5,5,5,5"/>
         <Frame x:Name="MainFrame" Grid.Row="1" Grid.ColumnSpan="4" NavigationUIVisibility="Hidden"/>
         <TextBlock x:Name="DateTimeNow" Grid.Row="2" Grid.ColumnSpan="4" 
                HorizontalAlignment="Right" VerticalAlignment="Center" 

@@ -1,0 +1,10 @@
+﻿<Page x:Class="_222_Busin.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Администратор">
+    <Grid>
+        <Button Content="Таблица пользователей" Click="BtnTab1_Click" HorizontalAlignment="Left" Margin="20,20,0,0" Width="180"/>
+        <Button Content="Таблица категорий" Click="BtnTab2_Click" HorizontalAlignment="Center" Margin="0,20,0,0" Width="180"/>
+        <Button Content="Таблица платежей" Click="BtnTab3_Click" HorizontalAlignment="Right" Margin="0,20,20,0" Width="180"/>
+    </Grid>
+</Page>

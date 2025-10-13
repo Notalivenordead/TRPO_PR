@@ -1,0 +1,22 @@
+﻿<Page x:Class="_222_Busin.Pages.ChangePassPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Смена пароля">
+    <Grid Margin="20">
+        <StackPanel>
+            <Label Content="Введите логин:"/>
+            <TextBox x:Name="TxtLogin" ToolTip="Введите свой логин"/>
+
+            <Label Content="Введите старый пароль:"/>
+            <PasswordBox x:Name="TxtOldPass" ToolTip="Введите текущий пароль"/>
+
+            <Label Content="Введите новый пароль:"/>
+            <PasswordBox x:Name="TxtNewPass" ToolTip="Введите новый пароль (не менее 6 символов)"/>
+
+            <Label Content="Повторите новый пароль:"/>
+            <PasswordBox x:Name="TxtNewPassRepeat" ToolTip="Повторите новый пароль"/>
+
+            <Button Content="Сменить пароль" Click="ButtonChange_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Page>

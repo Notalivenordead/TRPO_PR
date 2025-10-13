@@ -5,7 +5,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace _222_Busin.Pages
 {
@@ -69,19 +68,19 @@ namespace _222_Busin.Pages
             failedAttempts = 0;
             MessageBox.Show("Пользователь успешно найден!");
 
-            //switch (user.Role)
-            //{
-            //    case "User":
-            //        NavigationService?.Navigate(new Pages.UserPage());
-            //        break;
-            //    case "Admin":
-            //    case "Administrator":
-            //        NavigationService?.Navigate(new Pages.AdminPage());
-            //        break;
-            //    default:
-            //        NavigationService?.Navigate(new Pages.UserPage());
-            //        break;
-            //}
+            switch (user.Role)
+            {
+                case "User":
+                    NavigationService?.Navigate(new Pages.UserPage());
+                    break;
+                case "Admin":
+                case "Administrator":
+                    NavigationService?.Navigate(new Pages.AdminPage());
+                    break;
+                default:
+                    NavigationService?.Navigate(new Pages.UserPage());
+                    break;
+            }
         }
 
         private void ButtonReg_Click(object sender, RoutedEventArgs e)

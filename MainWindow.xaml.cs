@@ -64,5 +64,11 @@ namespace _222_Busin
             if (MessageBox.Show("Вы уверены, что хотите закрыть окно ? ", "Message", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 PaymentWindow.Close();
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+                MainFrame.GoBack();
+        }
     }
 }

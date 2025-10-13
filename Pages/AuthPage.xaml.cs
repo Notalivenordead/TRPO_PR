@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -45,7 +46,7 @@ namespace _222_Busin.Pages
 
             string hashedPassword = GetHash(PasswordBox.Password);
             var db = Entities.GetContext();
-            var user = db.Users.AsQueryable().AsNoTracking()
+            var user = db.User.AsQueryable().AsNoTracking()
                 .FirstOrDefault(u => u.Login == TextBoxLogin.Text && u.Password == hashedPassword);
 
             if (user == null)

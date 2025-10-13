@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace _222_Busin.Pages
 {
@@ -90,18 +80,18 @@ namespace _222_Busin.Pages
                 return;
             }
 
-            //Entities db = new Entities();
-            //{
-            //    var user = db.Users
-            //        .AsNoTracking()
-            //        .FirstOrDefault(u => u.Login == txtbxLog.Text);
+            Entities db = new Entities();
+            {
+                var user = db.User
+                    .AsNoTracking()
+                    .FirstOrDefault(u => u.Login == txtbxLog.Text);
 
-            //    if (user != null)
-            //    {
-            //        MessageBox.Show("Пользователь с таким логином уже существует!");
-            //        return;
-            //    }
-            //}
+                if (user != null)
+                {
+                    MessageBox.Show("Пользователь с таким логином уже существует!");
+                    return;
+                }
+            } 
 
             if (passBxFrst.Password.Length < 6)
             {
@@ -131,7 +121,22 @@ namespace _222_Busin.Pages
                 MessageBox.Show("Добавьте хотя бы одну цифру!");
                 return;
             }
-            MessageBox.Show("Первые три проверки пройдены успешно!");
+            else
+            {
+                User userObject = new User
+                {
+                    FIO = txtbxFIO.Text,
+                    Login = txtbxLog.Text,
+                    Password = passBxFrst.Password,
+
+                    Role = comboBxRole.Text
+                };
+                db.User.Add(userObject); db.SaveChanges();
+                MessageBox.Show("Пользователь успешно зарегистрирован!"); txtbxLog.Clear();
+                passBxFrst.Clear(); passBxScnd.Clear(); comboBxRole.SelectedIndex = 1; txtbxFIO.Clear();
+                return;
+            }
+
         }
     }
 }

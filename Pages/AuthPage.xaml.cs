@@ -90,7 +90,7 @@ namespace _222_Busin.Pages
 
         private void ButtonChangePassword_Click(object sender, RoutedEventArgs e)
         {
-            //NavigationService?.Navigate(new ChangePassPage());
+            NavigationService?.Navigate(new ChangePassPage());
         }
 
         // Капча

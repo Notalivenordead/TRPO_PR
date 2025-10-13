@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _222_Busin.Pages;
+using System;
 using System.Windows;
 
 namespace _222_Busin
@@ -9,6 +10,12 @@ namespace _222_Busin
         {
             InitializeComponent();
             SwitchToTheme1();
+            LoadAuthPage();
+        }
+
+        private void LoadAuthPage()
+        {
+            MainFrame.Navigate(new AuthPage());
         }
 
         private void ThemeToggle_Click(object sender, RoutedEventArgs e)

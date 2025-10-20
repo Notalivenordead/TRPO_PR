@@ -1,6 +1,10 @@
-﻿using System.Linq;
+﻿using System;
+using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Media.Imaging;
 
 namespace _222_Busin.Pages
 {
@@ -43,6 +47,34 @@ namespace _222_Busin.Pages
             sortComboBox.SelectedIndex = 0;
             onlyAdminCheckBox.IsChecked = false;
             UpdateUsers();
+        }
+    }
+
+    public class ImagePathConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            try
+            {
+                if (value == null || string.IsNullOrEmpty(value.ToString()))
+                    return new BitmapImage(new Uri("pack://application:,,,/images/default.jpg"));
+
+                string imageName = value.ToString();
+
+                if (imageName.StartsWith("http") || imageName.Contains(":\\"))
+                    return new BitmapImage(new Uri(imageName));
+
+                return new BitmapImage(new Uri($"pack://application:,,,/images/{imageName}"));
+            }
+            catch
+            {
+                return new BitmapImage(new Uri("pack://application:,,,/images/default.jpg"));
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

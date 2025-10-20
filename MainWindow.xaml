@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:_222_Busin"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
+        Closing="Window_Closing"
         Title="Учёт платежей" Height="450" Width="800">
     <Grid>
         <!--Объявление строк-->
@@ -17,16 +18,14 @@
 
         <!--Объявление столбцов-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="140"/>
-            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="BackButton" Content="Назад" Grid.Column="0" Margin="5,5,5,5" Click="BackButton_Click"/>
-        <ToggleButton x:Name="ThemeToggle" Grid.Column="2" 
-                  Content="Тёмная тема" Click="ThemeToggle_Click" Margin="5,5,5,5"/>
-        <Button x:Name="ExitButton" Content="Закрыть" Grid.Column="3" Click="ExitButton_Click" Margin="5,5,5,5"/>
+        <Button x:Name="BackButton" Content="Назад" Grid.Column="0" Margin="5,0,5,5" Click="BackButton_Click"/>
+        <Button x:Name="ThemeButton" Grid.Column="2" 
+                Content="Тёмная тема" Click="ThemeButton_Click" Margin="5,0,5,5"/>
         <Frame x:Name="MainFrame" Grid.Row="1" Grid.ColumnSpan="4" NavigationUIVisibility="Hidden"/>
         <TextBlock x:Name="DateTimeNow" Grid.Row="2" Grid.ColumnSpan="4" 
                HorizontalAlignment="Right" VerticalAlignment="Center" 

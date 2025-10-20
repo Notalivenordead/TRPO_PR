@@ -1,11 +1,14 @@
 ﻿using _222_Busin.Pages;
 using System;
+using System.ComponentModel;
 using System.Windows;
 
 namespace _222_Busin
 {
     public partial class MainWindow : Window
     {
+        private bool _isDarkTheme = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -18,17 +21,19 @@ namespace _222_Busin
             MainFrame.Navigate(new AuthPage());
         }
 
-        private void ThemeToggle_Click(object sender, RoutedEventArgs e)
+        private void ThemeButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ThemeToggle.IsChecked == true)
+            if (_isDarkTheme)
             {
-                SwitchToTheme2();
-                ThemeToggle.Content = "Светлая тема";
+                SwitchToTheme1();
+                ThemeButton.Content = "Тёмная тема";
+                _isDarkTheme = false;
             }
             else
             {
-                SwitchToTheme1();
-                ThemeToggle.Content = "Тёмная тема";
+                SwitchToTheme2();
+                ThemeButton.Content = "Светлая тема";
+                _isDarkTheme = true;
             }
         }
 
@@ -59,10 +64,13 @@ namespace _222_Busin
             timer.Start();
         }
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
-            if (MessageBox.Show("Вы уверены, что хотите закрыть окно ? ", "Message", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                PaymentWindow.Close();
+            if (MessageBox.Show("Вы уверены, что хотите закрыть окно?", "Подтверждение",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

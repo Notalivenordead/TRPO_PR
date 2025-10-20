@@ -17,12 +17,17 @@ namespace _222_Busin.Pages
 
         private void BtnTab2_Click(object sender, RoutedEventArgs e)
         {
-            //NavigationService?.Navigate(new CategoryTabPage());
+            NavigationService?.Navigate(new CategoryTabPage());
         }
 
         private void BtnTab3_Click(object sender, RoutedEventArgs e)
         {
-            //NavigationService?.Navigate(new PaymentTabPage());
+            NavigationService?.Navigate(new PaymentTabPage());
+        }
+
+        private void BtnTab4_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new DiagrammPage());
         }
     }
 }

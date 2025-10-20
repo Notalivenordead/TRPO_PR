@@ -48,3 +48,13 @@ namespace _222_Busin.Pages
         private void ButtonClean_Click(object sender, RoutedEventArgs e) => TBCategoryName.Text = "";
     }
 }
+
+/*Torik
+hTyd82ChdP1
+Porin
+iOjsdwu8186g
+Newtest
+nstr655Hff
+Newtest2
+nstr655Hff23
+*/

@@ -22,10 +22,7 @@ namespace _222_Busin.Pages
             }
         }
 
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new AddUserPage(null));
-        }
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e) => NavigationService?.Navigate(new AddUserPage(null));
 
         private void ButtonDel_Click(object sender, RoutedEventArgs e)
         {

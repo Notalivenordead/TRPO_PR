@@ -23,14 +23,6 @@
                 <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="120"/>
                 <DataGridTextColumn Header="Количество" Binding="{Binding Num}" Width="80"/>
                 <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="80"/>
-                <DataGridTextColumn Header="Сумма" Width="80">
-                    <DataGridTextColumn.Binding>
-                        <MultiBinding StringFormat="{}{0:N2}">
-                            <Binding Path="Price"/>
-                            <Binding Path="Num"/>
-                        </MultiBinding>
-                    </DataGridTextColumn.Binding>
-                </DataGridTextColumn>
                 <DataGridTemplateColumn Header="Действия" Width="120">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
